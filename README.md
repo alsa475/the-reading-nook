@@ -1,4 +1,3 @@
-# reading-nook
 # the-reading-nook
 
 In the project directory run:
