@@ -1,0 +1,41 @@
+.App {
+    text-align: center;
+}
+  
+body {
+    text-align: center;
+    background-color: beige;
+}
+  
+h1 {
+    color: darkslategrey;
+}
+  
+table {
+    border: 2px solid lightsteelblue;
+    background-color: white;
+}
+  
+th {
+    border: 1px solid lightsteelblue;
+    color: darkslateblue;
+    background-color: lightgrey;
+    width: 300px;
+}
+  
+td {
+    border: 1px solid lightsteelblue;
+    text-align: left;
+}
+  
+input {
+    color: darkslateblue;
+    margin-left: 10px;
+    padding: 5px;
+}
+  
+button {
+    color: darkslateblue;
+    margin-left: 10px;
+}
+  
