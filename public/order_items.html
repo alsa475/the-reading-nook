@@ -3,22 +3,21 @@
 
 <head>
   <link href="styles.css" rel="stylesheet">
-  <title>Orders</title>
+  <title>Order Details</title>
 </head>
 
 <body>
   <h1>The Reading Nook Orders</h1>
 
   <table>
-    <caption>Orders</caption>
+    <caption>Order Details</caption>
     <thead>
       <tr>
         <th>Order Number</th>
         <th>Customer</th>
-        <th>Order Date</th>
-        <th>To be shipped</th>
-        <th>Order Complete</th>
-        <th>View Details</th>
+        <th>Book Ordered</th>
+        <th>Quantity</th>
+        <th>Shipment Completed</th>
         <th>Edit</th>
         <th>Delete</th>
       </tr>
@@ -28,10 +27,9 @@
       <tr>
         <td>1</td>
         <td>Bob Smith</td>
-        <td>02-06-2022</td>
-        <td>No</td>
-        <td>Yes</td>
-        <td><a href="/order_items.html">View Details</a> </td>
+        <td>Harry Potter and the Sorcerer's Stone</td>
+        <td>1</td>
+        <td>True</td>
         <td></td>
         <td></td>
       </tr>
@@ -39,11 +37,10 @@
   </table>
 
   <br>
-  <a href="/new_order.html">Add a new order</a>
   <br>
 
   <div>
-    <input type="text" placeholder="Search for an order...">
+    <input type="text" placeholder="Search for an item...">
   </div>
 
   <br>
