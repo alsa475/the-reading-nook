@@ -3,13 +3,13 @@
     
 <head>
     <link href="styles.css" rel="stylesheet">
-    <title>New Customer</title>
+    <title>New Book</title>
 </head>
 
 <body>
     <h1>Add a new book</h1>
 
-    <div>
+    <form>
     <input
         type="text"
         placeholder="Title"/>
@@ -20,13 +20,13 @@
         type="text"
         placeholder="Genre"/>
     <input
-        type="text"
+        type="number" min='0.01' step ='0.01'
         placeholder="Price"/>
     <input
-        type="text"
+        type="number"
         placeholder="Quantity in stock"/>
     <button>Add book</button>
-    </div>
+    </form>
     
     <br>
     <a href="/books.html">Return to list of books</a>  

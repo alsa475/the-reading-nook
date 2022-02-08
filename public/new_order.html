@@ -2,34 +2,47 @@
 <html lang="en">
 
 <head>
-        <link href="styles.css" rel="stylesheet">
-        <title>New Order</title>
+    <link href="styles.css" rel="stylesheet">
+    <title>New Order</title>
 </head>
 
 <body>
     <h1>Add a new order</h1>
 
-    <div>
+    <form>
     <input
-        type="text"
+        type="number"
         placeholder="Customer ID"/>
     <input
-        type="text"
+        type="number"
         placeholder="Book ID"/>
     <input
-        type="text"
+        type="number"
         placeholder="Quantity"/>
     <input
-        type="text"
+        type="date"
         placeholder="Order date"/>
-    <input
-        type="text"
-        placeholder="To be shipped?"/>
-    <input
-        type="text"
-        placeholder="Order complete?"/>
+    
+    <p>Will this order be shipped to the customer?</p>
+    <input type="radio" id="toBeShipped"
+        name="shipped" value="True">
+       <label for="toBeShipped">Yes</label>
+   
+    <input type="radio" id="notToBeShipped"
+        name="shipped" value="False">
+       <label for="notToBeShipped">No</label>
+   
+    <p>Is this order complete?</p>
+    <input type="radio" id="orderComplete"
+           name="complete" value="True">
+          <label for="orderComplete">Yes</label>
+      
+    <input type="radio" id="orderNotComplete"
+           name="complete" value="False">
+          <label for="orderNotComplete">No</label>
+    <br>
     <button>Add order</button>
-    </div>
+    </form>
     
     <br>
     <a href="/orders.html">Return to list of orders</a>  
