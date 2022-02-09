@@ -3,37 +3,37 @@
 
 <head>
     <link href="styles.css" rel="stylesheet">
-    <title>New Order</title>
+    <title>Edit Order Itme</title>
 </head>
 
 <body>
-    <h1>Add a new order</h1>
+    <h1>Edit order item</h1>
 
     <form>
         <label for="customer_id">Customer ID:</label>
-        <input type="number" placeholder="Customer ID" />
+        <input type="number" placeholder="1" />
 
         <br>
         <label for="book_id">Book ID:</label>
-        <input type="number" placeholder="Book ID" />
+        <input type="number" placeholder="2" />
 
         <br>
         <label for="quantity">Quantity:</label>
-        <input type="number" placeholder="Quantity" />
+        <input type="number" placeholder="1" />
 
         <br>
         <label for="order_date">Order Date:</label>
-        <input type="date" placeholder="Order date" />
+        <input type="text" placeholder="02-06-2022" />
 
         <p>Will this order be shipped to the customer?</p>
         <input type="radio" id="toBeShipped" name="shipped" value="True">
         <label for="toBeShipped">Yes</label>
 
-        <input type="radio" id="notToBeShipped" name="shipped" value="False">
+        <input type="radio" id="notToBeShipped" name="shipped" value="False" checked="checked">
         <label for="notToBeShipped">No</label>
 
         <p>Is this order complete?</p>
-        <input type="radio" id="orderComplete" name="complete" value="True">
+        <input type="radio" id="orderComplete" name="complete" value="True" checked="checked">
         <label for="orderComplete">Yes</label>
 
         <input type="radio" id="orderNotComplete" name="complete" value="False">

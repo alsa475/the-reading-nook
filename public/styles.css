@@ -27,11 +27,13 @@ td {
 input {
     color: darkslateblue;
     margin-left: 10px;
+    margin-top: 10px;
     padding: 5px;
 }
   
 button {
     color: darkslateblue;
     margin-left: 10px;
+    margin-top: 20px;
 }
   
