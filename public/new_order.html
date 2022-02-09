@@ -8,38 +8,57 @@
 
 <body>
     <h1>Add a new order</h1>
-
+    <h2>Order</h2>
     <form>
-        <label for="customer_id">Customer ID:</label>
-        <input type="number" placeholder="Customer ID" />
+        <fieldset>
+            <label for="customer_id">Customer ID:</label>
+            <input type="number" placeholder="Customer ID" />
 
-        <br>
-        <label for="book_id">Book ID:</label>
-        <input type="number" placeholder="Book ID" />
+            <label for="order_date">Order Date:</label>
+            <input type="date" placeholder="Order date" />
 
-        <br>
-        <label for="quantity">Quantity:</label>
-        <input type="number" placeholder="Quantity" />
+            <p>Will this order be shipped to the customer?</p>
+            <input type="radio" id="toBeShipped" name="shipped" value="True">
+            <label for="toBeShipped">Yes</label>
 
-        <br>
-        <label for="order_date">Order Date:</label>
-        <input type="date" placeholder="Order date" />
+            <input type="radio" id="notToBeShipped" name="shipped" value="False">
+            <label for="notToBeShipped">No</label>
 
-        <p>Will this order be shipped to the customer?</p>
-        <input type="radio" id="toBeShipped" name="shipped" value="True">
-        <label for="toBeShipped">Yes</label>
+            <p>Is this order complete?</p>
+            <input type="radio" id="orderComplete" name="complete" value="True">
+            <label for="orderComplete">Yes</label>
 
-        <input type="radio" id="notToBeShipped" name="shipped" value="False">
-        <label for="notToBeShipped">No</label>
+            <input type="radio" id="orderNotComplete" name="complete" value="False">
+            <label for="orderNotComplete">No</label>
+            <br>
 
-        <p>Is this order complete?</p>
-        <input type="radio" id="orderComplete" name="complete" value="True">
-        <label for="orderComplete">Yes</label>
+            <br>
+            <h3>Order Details</h3>
+            <input type="number" placeholder="Book ID" />
+            <input type="number" placeholder="Quantity" />
+            <select name="dropdown">
+                <option value="Not Complete" selected>Not Complete</option>
+                <option value="Complete">Complete</option>
+            </select>
+            <br>
+            <input type="number" placeholder="Book ID" />
+            <input type="number" placeholder="Quantity" />
+            <select name="dropdown">
+                <option value="Not Complete" selected>Not Complete</option>
+                <option value="Complete">Complete</option>
+            </select>
+            <br>
+            <input type="number" placeholder="Book ID" />
+            <input type="number" placeholder="Quantity" />
+            <select name="dropdown">
+                <option value="Not Complete" selected>Not Complete</option>
+                <option value="Complete">Complete</option>
+            </select>
 
-        <input type="radio" id="orderNotComplete" name="complete" value="False">
-        <label for="orderNotComplete">No</label>
-        <br>
-        <button>Add order</button>
+            <br>
+            <br>
+            <button>Add order</button>
+        </fieldset>
     </form>
 
     <br>

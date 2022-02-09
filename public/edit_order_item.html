@@ -3,43 +3,72 @@
 
 <head>
     <link href="styles.css" rel="stylesheet">
-    <title>Edit Order Itme</title>
+    <title>Edit Order Item</title>
 </head>
 
 <body>
     <h1>Edit order item</h1>
-
+    <h2>Order</h2>
     <form>
-        <label for="customer_id">Customer ID:</label>
-        <input type="number" placeholder="1" />
+        <fieldset>
+            <label for="customer_id">Customer ID:</label>
+            <input type="number" placeholder="1" />
 
-        <br>
-        <label for="book_id">Book ID:</label>
-        <input type="number" placeholder="2" />
+            <label for="order_date">Order Date:</label>
+            <input type="text" placeholder="02-06-2022" />
 
-        <br>
-        <label for="quantity">Quantity:</label>
-        <input type="number" placeholder="1" />
+            <p>Will this order be shipped to the customer?</p>
+            <input type="radio" id="toBeShipped" name="shipped" value="True">
+            <label for="toBeShipped">Yes</label>
 
-        <br>
-        <label for="order_date">Order Date:</label>
-        <input type="text" placeholder="02-06-2022" />
+            <input type="radio" id="notToBeShipped" name="shipped" value="False" checked="checked">
+            <label for="notToBeShipped">No</label>
 
-        <p>Will this order be shipped to the customer?</p>
-        <input type="radio" id="toBeShipped" name="shipped" value="True">
-        <label for="toBeShipped">Yes</label>
+            <p>Is this order complete?</p>
+            <input type="radio" id="orderComplete" name="complete" value="True" checked="checked">
+            <label for="orderComplete">Yes</label>
 
-        <input type="radio" id="notToBeShipped" name="shipped" value="False" checked="checked">
-        <label for="notToBeShipped">No</label>
+            <input type="radio" id="orderNotComplete" name="complete" value="False">
+            <label for="orderNotComplete">No</label>
+            <br>
 
-        <p>Is this order complete?</p>
-        <input type="radio" id="orderComplete" name="complete" value="True" checked="checked">
-        <label for="orderComplete">Yes</label>
+            <br>
+            <h3>Order Details</h3>
+            <label for="book_id">Book ID:</label>
+            <input type="number" placeholder="2" />
 
-        <input type="radio" id="orderNotComplete" name="complete" value="False">
-        <label for="orderNotComplete">No</label>
-        <br>
-        <button>Submit changes</button>
+            <label for="quantity">Quantity:</label>
+            <input type="number" placeholder="1" />
+
+            <select name="dropdown">
+                <option value="Not Complete" selected>Complete</option>
+                <option value="Complete">Not Complete</option>
+            </select>
+            <br>
+            <label for="book_id">Book ID:</label>
+            <input type="number" placeholder="Book ID" />
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" placeholder="Quantity" />
+            <select name="dropdown">
+                <option value="Not Complete" selected>Not Complete</option>
+                <option value="Complete">Complete</option>
+            </select>
+            <br>
+            <label for="book_id">Book ID:</label>
+            <input type="number" placeholder="Book ID" />
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" placeholder="Quantity" />
+            <select name="dropdown">
+                <option value="Not Complete" selected>Not Complete</option>
+                <option value="Complete">Complete</option>
+            </select>
+
+            <br>
+            <br>
+            <button>Submit changes</button>
+        </fieldset>
     </form>
 
     <br>
