@@ -1,11 +1,45 @@
 
 body {
-    background-color: beige;
+    background-color: #E7E8D1;
+    color: #234E70;
+}
+
+.nav {
+    display: flex; 
+    list-style-type: none; 
+    justify-content: center;
+    align-items: center;
+    background-color: #3285a8;
+    height: 50px;
+    border: 3px solid lightsteelblue;
+}
+
+.nav li {
+    list-style: none;
+    padding: 50px;
+}
+
+.nav a {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #A7BEAE;
+    height: 30px;
 }
   
 h1 {
-    color: darkslategrey;
+    color: darkslateblue;
+    text-align: center;
 }
+
   
 table {
     border: 2px solid lightsteelblue;
@@ -15,6 +49,7 @@ table {
 caption {
     font-size: larger;
     color: darkslateblue;
+    padding-bottom: 10px;
 }
   
 th {
@@ -27,6 +62,7 @@ th {
 td {
     border: 1px solid lightsteelblue;
     text-align: left;
+    color: #234E70;
 }
 
 .radio{
