@@ -11,6 +11,11 @@ table {
     border: 2px solid lightsteelblue;
     background-color: white;
 }
+
+caption {
+    font-size: larger;
+    color: darkslateblue;
+}
   
 th {
     border: 1px solid lightsteelblue;
@@ -21,6 +26,10 @@ th {
   
 td {
     border: 1px solid lightsteelblue;
+    text-align: left;
+}
+
+.radio{
     text-align: left;
 }
 

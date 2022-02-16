@@ -17,23 +17,26 @@
             <label for="order_date">Order Date:</label>
             <input type="date" placeholder="Order date" />
 
+            <label for="employee_id">Employee ID:</label>
+            <input type="number" placeholder="Employee ID" />
+
             <p>Will this order be shipped to the customer?</p>
             <input type="radio" id="toBeShipped" name="shipped" value="True">
-            <label for="toBeShipped">Yes</label>
+            <label class="radio" for="toBeShipped">Yes</label>
 
             <input type="radio" id="notToBeShipped" name="shipped" value="False">
-            <label for="notToBeShipped">No</label>
+            <label class="radio" for="notToBeShipped">No</label>
 
             <p>Is this order complete?</p>
             <input type="radio" id="orderComplete" name="complete" value="True">
-            <label for="orderComplete">Yes</label>
+            <label class="radio" for="orderComplete">Yes</label>
 
             <input type="radio" id="orderNotComplete" name="complete" value="False">
-            <label for="orderNotComplete">No</label>
+            <label class="radio" for="orderNotComplete">No</label>
             <br>
 
             <br>
-            <h3>Order Details</h3>
+            <h3>Order Items</h3>
             <label for="book_id">Book ID:</label>
             <input type="number" placeholder="Book ID" />
 
