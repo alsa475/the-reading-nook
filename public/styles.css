@@ -23,7 +23,14 @@ td {
     border: 1px solid lightsteelblue;
     text-align: left;
 }
-  
+
+label {
+    display: inline-block;
+    clear: left;
+    width: 150px;
+    text-align: right;
+}
+
 input {
     color: darkslateblue;
     margin-left: 10px;
@@ -31,6 +38,7 @@ input {
     padding: 5px;
 }
   
+
 button {
     color: darkslateblue;
     margin-left: 10px;
