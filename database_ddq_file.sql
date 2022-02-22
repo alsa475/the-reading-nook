@@ -85,6 +85,16 @@ INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Ha
 
 INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Harry Potter and the Deathly Hallows", "J.K. Rowling", "Fantasy Fiction", 14.99, 5);
 
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("The Boys In the Boat", "Daniel Brown", "Biography", 15.99, 3);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("The Davinci Code", "Dan Brown", "Mystery", 15.95, 3);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Dark Matter and the Dinosaurs", "Linda Randall", "Non-fiction", 15.95, 1);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("The Giver", "Lois Lowry", "Science Fiction", 9.99, 2);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Relational Database Design and Implementation: Clearly Explained", "Jan Harrington", "Non-fiction", 25.50, 3);
+
 
 -- Employees
 INSERT INTO `Employees` (first_name, last_name) VALUES ("Mary", "Randell");
@@ -120,10 +130,10 @@ INSERT INTO `Orders` (customer_id, employee_id, order_date, order_complete, to_b
 -- Order_items
 INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (1, 1, 1, FALSE);
 
-INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (1, 2, 1, FALSE);
+INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (1, 11, 1, FALSE);
 
-INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (1, 3, 1, FALSE);
+INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (1, 12, 1, FALSE);
 
 INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (2, 4, 3, TRUE);
 
-INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (3, 7, 2, TRUE);
+INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (3, 9, 2, TRUE);
