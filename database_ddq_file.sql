@@ -68,3 +68,62 @@ FOREIGN KEY (order_number) REFERENCES Orders(order_number),
 FOREIGN KEY (book_id) REFERENCES Books(book_id),
 PRIMARY KEY (order_number, book_id)
 ) ENGINE=InnoDB;
+
+-- Sample Data - Populate Entity Tables
+-- Books
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "Fantasy Fiction", 8.99, 5);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Harry Potter and the Chamber of Secrets", "J.K. Rowling", "Fantasy Fiction", 9.99, 6);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Harry Potter and the Prisoner of Azkaban", "J.K. Rowling", "Fantasy Fiction", 9.99, 7);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Harry Potter and the Goblet of Fire", "J.K. Rowling", "Fantasy Fiction", 12.99, 7);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Harry Potter and the Order of the Phoenix", "J.K. Rowling", "Fantasy Fiction", 12.99, 3);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Harry Potter and the Half Blood Prince", "J.K. Rowling", "Fantasy Fiction", 12.99, 5);
+
+INSERT INTO `Books` (title, author, genre, price, quantity_in_stock) VALUES ("Harry Potter and the Deathly Hallows", "J.K. Rowling", "Fantasy Fiction", 14.99, 5);
+
+
+-- Employees
+INSERT INTO `Employees` (first_name, last_name) VALUES ("Mary", "Randell");
+
+INSERT INTO `Employees` (first_name, last_name) VALUES ("Molly", "Jewell");
+
+INSERT INTO `Employees` (first_name, last_name) VALUES ("Arianna", "Welch");
+
+INSERT INTO `Employees` (first_name, last_name) VALUES ("Brandon", "Haywood");
+
+INSERT INTO `Employees` (first_name, last_name) VALUES ("Greg", "Windsor");
+
+INSERT INTO `Employees` (first_name, last_name) VALUES ("Devin", "Bell");
+
+-- Customers
+INSERT INTO `Customers` (first_name, last_name, email, street_address, city, state, zip_code) VALUES ("Marvin", "Crenshaw", "marvincrenshaw@email.com", "11223 W Oak St.", "Akron", "OH", "45231" );
+
+INSERT INTO `Customers` (first_name, last_name, email, street_address, city, state, zip_code) VALUES ("Evelyn", "Geary", "egeary@email.com", "365 SE Maple St.", "Milwaukee", "WI", "74582" );
+
+INSERT INTO `Customers` (first_name, last_name, email) VALUES ("James", "Cason", "jcason@email.com");
+
+INSERT INTO `Customers` (first_name, last_name) VALUES ("Diana", "Roderick");
+
+
+-- Orders
+INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (1, 2022-02-22, FALSE, TRUE);
+
+INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (2, 2022-01-19, TRUE, TRUE);
+
+INSERT INTO `Orders` (customer_id, employee_id, order_date, order_complete, to_be_shipped) VALUES (4, 1, 2021-12-15, TRUE, FALSE);
+
+
+-- Order_items
+INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (1, 1, 1, FALSE);
+
+INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (1, 2, 1, FALSE);
+
+INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (1, 3, 1, FALSE);
+
+INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (2, 4, 3, TRUE);
+
+INSERT INTO `Order_items` (order_number, book_id, quantity, order_item_complete) VALUES (3, 7, 2, TRUE);
