@@ -4,7 +4,12 @@
 -- Project Step 4: This file contains the Data Definition Queries for the database.
 
 -- Data Definition - Create Entity Tables
+DROP TABLE IF EXISTS `Order_items`;
+DROP TABLE IF EXISTS `Orders`;
 DROP TABLE IF EXISTS `Customers`;
+DROP TABLE IF EXISTS `Books`;
+DROP TABLE IF EXISTS `Employees`;
+
 
 CREATE TABLE `Customers` (
 `customer_id` int(11) UNIQUE NOT NULL AUTO_INCREMENT,
@@ -18,9 +23,6 @@ CREATE TABLE `Customers` (
 PRIMARY KEY (`customer_id`)
 ) ENGINE=InnoDB;
 
-
-DROP TABLE IF EXISTS `Books`;
-
 CREATE TABLE `Books` (
 `book_id` int(11) UNIQUE NOT NULL AUTO_INCREMENT,
 `title` varchar(255) NOT NULL,
@@ -31,9 +33,6 @@ CREATE TABLE `Books` (
 PRIMARY KEY (`book_id`)
 ) ENGINE=InnoDB;
 
-
-DROP TABLE IF EXISTS `Employees`;
-
 CREATE TABLE `Employees` (
 `employee_id` int(11) UNIQUE NOT NULL AUTO_INCREMENT,
 `first_name` varchar(255) NOT NULL,
@@ -41,33 +40,28 @@ CREATE TABLE `Employees` (
 PRIMARY KEY (`employee_id`)
 ) ENGINE=InnoDB;
 
-
-DROP TABLE IF EXISTS `Orders`;
-
 CREATE TABLE `Orders` (
-`order_number` int(11) UNIQUE NOT NULL AUTO_INCREMENT,
+`order_number` int(11) NOT NULL AUTO_INCREMENT,
 `customer_id` int(11) NOT NULL,
 `employee_id` int(11),
 `order_date` date,
 `order_complete` boolean NOT NULL,
 `to_be_shipped` boolean NOT NULL,
-FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
-FOREIGN KEY (employee_id) REFERENCES Employees(employee_id),
+CONSTRAINT `Orders_fk_1` FOREIGN KEY (`customer_id`) REFERENCES `Customers` (`customer_id`) ON DELETE CASCADE,
+CONSTRAINT `Orders_fk_2` FOREIGN KEY (`employee_id`) REFERENCES `Employees` (`employee_id`),
 PRIMARY KEY (`order_number`)
 ) ENGINE=InnoDB;
-
-
-DROP TABLE IF EXISTS `Order_items`;
 
 CREATE TABLE `Order_items` (
 `order_number` int(11) NOT NULL,
 `book_id` int(11) NOT NULL,
 `quantity` int(11) UNSIGNED NOT NULL,
 `order_item_complete` boolean NOT NULL,
-FOREIGN KEY (order_number) REFERENCES Orders(order_number),
-FOREIGN KEY (book_id) REFERENCES Books(book_id),
-PRIMARY KEY (order_number, book_id)
+FOREIGN KEY (`order_number`) REFERENCES `Orders` (`order_number`) ON DELETE CASCADE,
+FOREIGN KEY (`book_id`) REFERENCES `Books` (`book_id`) ON DELETE CASCADE,
+PRIMARY KEY (`order_number`, `book_id`)
 ) ENGINE=InnoDB;
+
 
 -- Sample Data - Populate Entity Tables
 -- Books
@@ -120,11 +114,11 @@ INSERT INTO `Customers` (first_name, last_name) VALUES ("Diana", "Roderick");
 
 
 -- Orders
-INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (1, 2022-02-22, FALSE, TRUE);
+INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (1, '2022-02-22', FALSE, TRUE);
 
-INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (2, 2022-01-19, TRUE, TRUE);
+INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (2, '2022-01-19', TRUE, TRUE);
 
-INSERT INTO `Orders` (customer_id, employee_id, order_date, order_complete, to_be_shipped) VALUES (4, 1, 2021-12-15, TRUE, FALSE);
+INSERT INTO `Orders` (customer_id, employee_id, order_date, order_complete, to_be_shipped) VALUES (4, 1, '2021-12-15', TRUE, FALSE);
 
 
 -- Order_items
