@@ -120,11 +120,11 @@ INSERT INTO `Customers` (first_name, last_name) VALUES ("Diana", "Roderick");
 
 
 -- Orders
-INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (1, 2022-02-22, FALSE, TRUE);
+INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (1, "2022-02-22", FALSE, TRUE);
 
-INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (2, 2022-01-19, TRUE, TRUE);
+INSERT INTO `Orders` (customer_id, order_date, order_complete, to_be_shipped) VALUES (2, "2022-01-19", TRUE, TRUE);
 
-INSERT INTO `Orders` (customer_id, employee_id, order_date, order_complete, to_be_shipped) VALUES (4, 1, 2021-12-15, TRUE, FALSE);
+INSERT INTO `Orders` (customer_id, employee_id, order_date, order_complete, to_be_shipped) VALUES (4, 1, "2021-12-15", TRUE, FALSE);
 
 
 -- Order_items
