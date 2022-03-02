@@ -1,3 +1,8 @@
+-- Dana Yarges
+-- Amy Lucas
+-- CS340
+-- Project Step 4: This file contains the Data Manipulation Queries for the database.
+
 -- Queries for displaying a complete table
 SELECT * FROM Customers;
 SELECT * FROM Books;
